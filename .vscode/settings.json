@@ -3,6 +3,12 @@
     "xlocale": "cpp",
     "xstring": "cpp",
     "vector": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "xutility": "cpp",
+    "ostream": "cpp",
+    "deque": "cpp",
+    "map": "cpp",
+    "xtree": "cpp",
+    "utility": "cpp"
   }
 }
