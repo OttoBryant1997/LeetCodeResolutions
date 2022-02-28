@@ -15,11 +15,43 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
-class Solution {
+#include <set>
+#include <vector>
+#include <iostream>
+using namespace std;
+class Solution
+{
 public:
-    ListNode* deleteDuplicates(ListNode* head) {
-
+    ListNode *deleteDuplicates(ListNode *head)
+    {
+        ListNode *p = head;
+        set<int> values;
+        vector<int> tmp;
+        while (p)
+        {
+            if (values.find(p->val) == values.end())
+            {
+                values.insert(p->val);
+                tmp.push_back(p->val);
+            }
+            p = p->next;
+        }
+        ListNode *result = nullptr;
+        ListNode *resultTail = nullptr;
+        for (const auto &val : tmp)
+        {
+            auto p = new ListNode(val);
+            if (!result)
+            {
+                result = p;
+            }
+            else
+            {
+                resultTail->next = p;
+            }
+            resultTail = p;
+        }
+        return result;
     }
 };
 // @lc code=end
-
