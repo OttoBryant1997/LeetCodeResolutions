@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 // @before-stub-for-debug-begin
 #include <vector>
 #include <string>
-#include "commoncppproblem70.h"
 
 using namespace std;
 // @before-stub-for-debug-end
@@ -47,20 +45,3 @@ public:
     }
 };
 // @lc code=end
-=======
-/*
- * @lc app=leetcode.cn id=70 lang=cpp
- *
- * [70] 爬楼梯
- */
-
-// @lc code=start
-class Solution
-{
-public:
-    int climbStairs(int n)
-    {
-    }
-};
-// @lc code=end
->>>>>>> de4a9a73672a5ee745cfbcd0f8d073aa7d9a9f29

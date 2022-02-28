@@ -9,6 +9,13 @@
     "deque": "cpp",
     "map": "cpp",
     "xtree": "cpp",
-    "utility": "cpp"
-  }
+    "utility": "cpp",
+    "string": "cpp",
+    "xiosbase": "cpp"
+  },
+  "C_Cpp.vcFormat.indent.accessSpecifiers": true,
+  "C_Cpp.vcFormat.indent.braces": true,
+  "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+  "C_Cpp.vcFormat.indent.caseLabels": true,
+  "files.autoSave": "afterDelay"
 }
