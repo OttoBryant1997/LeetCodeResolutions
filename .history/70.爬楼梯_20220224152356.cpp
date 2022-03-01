@@ -1,6 +1,7 @@
 // @before-stub-for-debug-begin
 #include <vector>
 #include <string>
+#include "commoncppproblem70.h"
 
 using namespace std;
 // @before-stub-for-debug-end
@@ -17,7 +18,7 @@ using namespace std;
  * n=2 f(n)=2
  * n=3 f(n)=3
  * n=4 f(4)=f(2)+f(3)
- * 考虑最后一步 易知 :f(n)=f(n-1)+f(n-2)
+ * 考虑最后一步 容易得出f(n)=f(n-1)+f(n-2)
  */
 
 // @lc code=start

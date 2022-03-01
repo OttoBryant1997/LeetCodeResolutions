@@ -2,6 +2,20 @@
   "files.associations": {
     "xlocale": "cpp",
     "xstring": "cpp",
-    "vector": "cpp"
-  }
+    "vector": "cpp",
+    "iostream": "cpp",
+    "xutility": "cpp",
+    "ostream": "cpp",
+    "deque": "cpp",
+    "map": "cpp",
+    "xtree": "cpp",
+    "utility": "cpp",
+    "string": "cpp",
+    "xiosbase": "cpp"
+  },
+  "C_Cpp.vcFormat.indent.accessSpecifiers": true,
+  "C_Cpp.vcFormat.indent.braces": true,
+  "C_Cpp.vcFormat.indent.caseContentsWhenBlock": true,
+  "C_Cpp.vcFormat.indent.caseLabels": true,
+  "files.autoSave": "afterDelay"
 }
