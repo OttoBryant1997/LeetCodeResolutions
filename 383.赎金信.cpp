@@ -14,27 +14,32 @@ public:
     bool canConstruct(string ransomNote, string magazine)
     {
         bool result = true;
-        map<string, int> ransomNumbers;
+        map<string, int> magCNumbers;
         auto rL = ransomNote.length();
-        auto mL = ransomNote.length();
-        for (int i = 0; i < rL; ++i)
+        auto mL = magazine.length();
+        for (int i = 0; i < mL; ++i)
         {
-            auto c = ransomNote.substr(i, 1);
-            if (ransomNumbers.find(c) == ransomNumbers.end())
+            auto c = magazine.substr(i, 1);
+            if (magCNumbers.find(c) == magCNumbers.end())
             {
-                ransomNumbers.insert({c, 1});
+                magCNumbers.insert({c, 1});
             }
             else
             {
-                ransomNumbers[c] += 1;
+                magCNumbers[c] += 1;
             }
         }
 
-        for (int i = 0; i < mL; i++)
+        for (int i = 0; i < rL; i++)
         {
             auto c = ransomNote.substr(i, 1);
-            if (ransomNumbers.find(c) != ransomNumbers.end() && ransomNumbers[c] == 1)
+            if (magCNumbers.find(c) != magCNumbers.end())
             {
+                magCNumbers[c]--;
+                if (magCNumbers[c] == 0)
+                {
+                    magCNumbers.erase(c);
+                }
             }
             else
             {
