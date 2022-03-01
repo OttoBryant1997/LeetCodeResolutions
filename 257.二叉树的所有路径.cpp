@@ -29,14 +29,19 @@ public:
         df(root, {});
         for (auto str : mVals)
         {
-            cout << endl;
             string res = "";
-            for (int i = 0; i < res.length(); i++)
+            for (int i = 0; i < str.size(); i++)
             {
-                cout << c << "--";
-                res +
+                if (i == str.size() - 1)
+                {
+                    res += to_string(str[i]);
+                }
+                else
+                {
+                    res += to_string(str[i]) + "->";
+                }
             }
-            cout << endl;
+            mResult.push_back(res);
         }
 
         return mResult;
