@@ -11,7 +11,13 @@
     "xtree": "cpp",
     "utility": "cpp",
     "string": "cpp",
-    "xiosbase": "cpp"
+    "xiosbase": "cpp",
+    "memory": "cpp",
+    "system_error": "cpp",
+    "type_traits": "cpp",
+    "xmemory": "cpp",
+    "xstddef": "cpp",
+    "regex": "cpp"
   },
   "C_Cpp.vcFormat.indent.accessSpecifiers": true,
   "C_Cpp.vcFormat.indent.braces": true,
