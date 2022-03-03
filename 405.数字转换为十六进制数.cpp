@@ -5,20 +5,36 @@
  */
 
 // @lc code=start
+#include <vector>
 #include <string>
+#include <map>
 using namespace std;
 class Solution
 {
 public:
     string toHex(int num)
     {
-        string result;
-        int curBit = 1;
-        int a = -1;
-        for (int i = 0; i < 32; i++)
+        if (num == 0)
+            return "0";
+        auto hexLen = sizeof(int) * 2;
+        map<int, string> mapIntHex = {{0, "0"}, {1, "1"}, {2, "2"}, {3, "3"}, {4, "4"}, {5, "5"}, {6, "6"}, {7, "7"}, {8, "8"}, {9, "9"}, {10, "a"}, {11, "b"}, {12, "c"}, {13, "d"}, {14, "e"}, {15, "f"}};
+        string result = "";
+        vector<string> tmp;
+        for (int i = 0; i < hexLen; i++)
         {
-            cout << "bit " << i << ": " << (curBit & a) << endl;
-            curBit <<= 1;
+            auto val = num & 0xf;
+            tmp.push_back(mapIntHex[val]);
+            num >>= 4;
+            // cout << mapIntHex[val] << endl;
+        }
+        bool start = false;
+        int size = tmp.size();
+        for (int i = 0; i < size; i++)
+        {
+            if (tmp[size - i - 1] == "0" && !start)
+                continue;
+            result += tmp[size - i - 1];
+            start = true;
         }
         return result;
     }
