@@ -10,6 +10,7 @@ using namespace std;
  * @lc app=leetcode.cn id=482 lang=cpp
  *
  * [482] 密钥格式化
+ * 对于字符串，宁愿做reverse也不要做头插
  */
 
 // @lc code=start
@@ -20,38 +21,43 @@ using namespace std;
 class Solution
 {
 public:
-    string licenseKeyFormatting(string s, int k)
+    inline string licenseKeyFormatting(string s, int k)
     {
-        int size = s.length();
-        vector<string> tmp;
-        auto data = s.c_str();
-        string result;
-        int validIdx = 0;
-        for (int i = 0; i < size; i++)
-        {
-            cout << "cur index:" << size - 1 - i << endl;
-            char curVal = data[size - 1 - i];
-            cout << "get curVal:" << curVal << endl;
-            if (curVal != '-')
-            {
-                validIdx++;
-
-                if (curVal >= 'a' && curVal <= 'z')
-                {
-                    curVal = 'A' + (curVal - 'a');
-                }
-
-                if ((validIdx + 1) % k == 0 && i != size - 1)
-                {
-                    result = "-" + curVal + result;
-                }
-                else
-                {
-                    result = curVal + result;
-                }
-            }
-        }
-        return result;
+        string ans;
+        size_t cnt{};
+        for_each(s.rbegin(), s.rend(), [&](auto &ch)
+                 {
+                if (isalnum(ch)) {
+                    if (cnt++ == k) {
+                        ans.push_back('-');
+                        cnt = 1;
+                    }
+                    ans.push_back(toupper(ch));
+                } });
+        reverse(ans.begin(), ans.end());
+        return ans;
+        // replace_all(s, "-", "");
+        // int size = s.length();
+        // if (size == 0)
+        //     return "";
+        // for (int i = 0; i < size; i++)
+        // {
+        //     s[i] = toupper(s[i]);
+        // }
+        // string result;
+        // string sep = "-";
+        // for (int i = 0; i < size; i++)
+        // {
+        //     if ((i + 1) % k == 0 && i != size - 1)
+        //     {
+        //         result = sep + s[size - 1 - i] + result;
+        //     }
+        //     else
+        //     {
+        //         result = s[size - 1 - i] + result;
+        //     }
+        // }
+        // return result;
     }
 };
 // @lc code=end
