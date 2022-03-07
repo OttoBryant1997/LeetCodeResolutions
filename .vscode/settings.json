@@ -12,15 +12,7 @@
     "utility": "cpp",
     "string": "cpp",
     "xiosbase": "cpp",
-<<<<<<< HEAD
-    "memory": "cpp",
-    "system_error": "cpp",
-    "type_traits": "cpp",
-    "xmemory": "cpp",
-    "xstddef": "cpp",
-    "regex": "cpp"
-=======
-    "algorithm": "cpp",
+    "regex": "cpp",
     "atomic": "cpp",
     "bit": "cpp",
     "cctype": "cpp",
@@ -58,7 +50,6 @@
     "xmemory": "cpp",
     "xstddef": "cpp",
     "xtr1common": "cpp"
->>>>>>> cec599b763ab6bbf36c31f992fe5d182120966bb
   },
   "C_Cpp.vcFormat.indent.accessSpecifiers": true,
   "C_Cpp.vcFormat.indent.braces": true,
