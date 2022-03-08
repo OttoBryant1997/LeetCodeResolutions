@@ -1,28 +1,19 @@
-// @before-stub-for-debug-begin
-#include <vector>
-#include <string>
-#include "commoncppproblem76.h"
-
-using namespace std;
-// @before-stub-for-debug-end
-
 /*
- * @lc app=leetcode.cn id=76 lang=cpp
+ * @lc app=leetcode.cn id=567 lang=cpp
  *
- * [76] 最小覆盖子串
- * 滑动窗口
- * 基于计数的方式进行处理
+ * [567] 字符串的排列
+ * 1.充足 2.连续
+ * 因此需要把我好长度和个数的关系
+ * 即种类齐全 每个种类的个数齐全且长度相等
  */
 
 // @lc code=start
 #include <string>
-#include <vector>
-#include <unordered_map>
 using namespace std;
 class Solution
 {
 public:
-    string minWindow(string s, string t)
+    bool checkInclusion(string t, string s)
     {
         string result;
         int window[128] = {0};       //窗口中字符的个数 含重复 仅记录有效字符 无效字符为0
@@ -68,7 +59,7 @@ public:
                 }
             }
         }
-        return result;
+        return result.length() == t.length();
     }
 };
 // @lc code=end

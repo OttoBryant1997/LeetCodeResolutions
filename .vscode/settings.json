@@ -49,7 +49,9 @@
     "xlocnum": "cpp",
     "xmemory": "cpp",
     "xstddef": "cpp",
-    "xtr1common": "cpp"
+    "xtr1common": "cpp",
+    "xhash": "cpp",
+    "unordered_map": "cpp"
   },
   "C_Cpp.vcFormat.indent.accessSpecifiers": true,
   "C_Cpp.vcFormat.indent.braces": true,
